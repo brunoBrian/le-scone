@@ -1,0 +1,88 @@
+.intro {
+	margin-top: 60px;
+
+	.logo {
+		margin-bottom: 60px;
+	}
+
+	.intro-info {
+		border-right: 2px solid $texto;
+		max-width: 320px;
+
+		p {
+			padding-top: 10px;
+
+			.aberto {
+				width: 12px;
+				height: 12px;
+				display: inline-block;
+				border-radius: 10px;
+				background: $flag-sucesso;
+				margin-left: 25px;
+			}
+		}
+
+		p:first-child {
+			border-bottom: 2px solid $texto;
+			padding-bottom: 10px;
+		}
+	}
+
+	.intro-telefone {
+		color: $texto-destacado;
+
+		&::after {
+			content: '/ / / /';
+			display: block;
+			color: $texto;
+			margin-top: 200px;
+			font-size: 220px;
+			letter-spacing: -90px;
+		}
+	}
+
+	.img-foto-intro {
+		border: $border-custom;
+		width: 100%;
+	}
+
+}
+
+@include d(m) {
+	
+	.intro {
+		.intro-telefone {
+
+			&::after {
+				margin-top: 80px;
+				font-size: 160px;
+				letter-spacing: -70px;
+			}
+		}
+	}
+
+}
+
+@include d(s) {
+	
+	.intro {
+		margin-top: 20px;
+
+		.intro-info, img, .intro-telefone {
+			margin: 0 auto;
+		}
+
+		.intro-info, .intro-telefone {
+			max-width: 220px;
+		}
+
+		.intro-telefone {
+			margin-bottom: 20px;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+}

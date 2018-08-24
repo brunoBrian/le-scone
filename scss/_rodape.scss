@@ -1,0 +1,27 @@
+footer {
+	padding: 20px 0;
+	background: $texto;
+	@include box-shadow(0 0 0 10px $texto);
+
+	p {
+		color: $borda;
+		display: inline-block;
+	}
+
+	a img {
+		float: right;
+	}
+}
+
+@include d(s) {
+	footer {
+		p {
+			text-align: center;
+		}
+
+		a img {
+			float: none;
+			margin: 20px auto;
+		}
+	}
+}

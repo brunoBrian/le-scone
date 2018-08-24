@@ -1,0 +1,58 @@
+body {
+	background: $cor-fundo;
+	color: $texto;
+	border: $border-custom;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+p {
+	@include tipo-1(18);
+}
+
+.titulo {
+	@include tipo-1(18);
+	text-transform: uppercase;
+	
+	&::after {
+		content: '';
+		display: block;
+		background: $texto;
+		width: 75%;
+		height: 2px;
+		float: right;
+		margin-top: 15px;
+		margin-right: 70px;
+	}
+
+}
+
+@include d(m) {
+
+	.titulo {
+		&::after {
+			width: 60%;
+		}
+	}
+
+}
+
+@include d(s) {
+
+	body {
+		border: none;
+	}
+
+	.titulo {
+		margin-bottom: 30px;
+
+		&::after {
+			width: 80%;
+			margin-right: 0px;
+		}
+	}
+
+}
